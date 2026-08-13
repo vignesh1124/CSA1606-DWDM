@@ -1,0 +1,15 @@
+preference <- matrix(c(18, 22, 20, 2, 28, 40, 20, 10, 40), nrow = 3, byrow = TRUE)
+colnames(preference) <- c("A", "B", "C")
+rownames(preference) <- c("5-6", "7-8", "9-10")
+
+cov_BC <- cov(preference[, "B"], preference[, "C"])
+cov_matrix <- cov(preference)
+cor_BC <- cor(preference[, "B"], preference[, "C"])
+cor_matrix <- cor(preference)
+
+cat("Sample Covariance between B and C =", cov_BC, "\n\n")
+cat("Sample Covariance Matrix:\n")
+print(cov_matrix)
+cat("\nSample Correlation between B and C =", cor_BC, "\n\n")
+cat("Sample Correlation Matrix:\n")
+print(cor_matrix)
